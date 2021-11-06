@@ -1,0 +1,43 @@
+{
+  "name": "NBPalette",
+  "fields": [
+    {
+      "fieldName": "nbPaletteID",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "nbPaletteTitle",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "nbPaletteType",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "nbPaletteColors",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "nbLastUpdated",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "nbLastUpdatedBy",
+      "fieldType": "String"
+    }
+  ],
+  "relationships": [],
+  "entityTableName": "nb_palette",
+  "dto": "no",
+  "pagination": "no",
+  "service": "no",
+  "jpaMetamodelFiltering": false,
+  "fluentMethods": true,
+  "readOnly": false,
+  "embedded": false,
+  "applications": ["NBSolarSurface", "NBSolarCore"],
+  "microserviceName": "NBSolarCore",
+  "clientRootFolder": "NBSolarCore",
+  "databaseType": "sql",
+  "changelogDate": "20211106151727"
+}

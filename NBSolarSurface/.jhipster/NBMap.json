@@ -1,0 +1,57 @@
+{
+  "name": "NBMap",
+  "fields": [
+    {
+      "fieldName": "nbID",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "nbName",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "nbOwner",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "nbOwnerPrivateKey",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "nbOwnerPublicKey",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "nbMapPublishMethod",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "nbSubscriptionDate",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "nbSubscriptionLastDate",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "nbLastUpdated",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "nbLastUpdatedBy",
+      "fieldType": "String"
+    }
+  ],
+  "relationships": [],
+  "entityTableName": "nb_map",
+  "dto": "no",
+  "pagination": "no",
+  "service": "no",
+  "jpaMetamodelFiltering": false,
+  "fluentMethods": true,
+  "readOnly": false,
+  "embedded": false,
+  "applications": ["NBSolarSurface", "NBSolarCore"],
+  "databaseType": "sql",
+  "changelogDate": "20211106151227"
+}

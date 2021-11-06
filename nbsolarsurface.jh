@@ -1,0 +1,129 @@
+
+
+
+application {
+  config {
+    baseName NBSolarSurface,
+    applicationType gateway,
+    packageName com.neutronbinary.infectolabs.gateway,
+    authenticationType jwt,
+    prodDatabaseType postgresql,
+    clientFramework angular
+  }
+  entities NBMap, NBUser, NBPalette, NBChart
+}
+   
+application {
+  config {
+    baseName NBSolarCore,
+    applicationType microservice,
+    packageName com.neutronbinary.infectolabs.microservice,
+    authenticationType jwt,
+    prodDatabaseType postgresql,
+    clientFramework angular
+  }
+  entities *
+}
+
+
+
+entity NBUser {
+	nbUserID String,
+    nbAuthType String,
+    nbPasswordHash String,
+    nbFirstName String,
+    nbLastName String,
+    nbAddress String,
+    nbEmailId String,
+    nbPhone String,
+    nbIsActive String,
+    nbIsSuspended String,
+    nbIsBanished String,
+    nbLastUpdated String,
+    nbLastUpdatedBy String
+}
+
+
+//relationship OneToMany {
+//	NBUser{nbUserID} to NBMap{nbOwner}
+//}
+
+
+entity NBMap {
+	nbID String,
+    nbName String,
+    nbOwner String,
+    nbOwnerPrivateKey String,
+    nbOwnerPublicKey String,
+    nbMapPublishMethod String,   
+    nbSubscriptionDate String,
+    nbSubscriptionLastDate String,
+    nbLastUpdated String,
+    nbLastUpdatedBy String
+}
+
+entity NBMapAttributes {
+	nbIDFK String,
+    nbTitle String,
+    nbTitleLocation String,
+    nbPaletteIDFK String,
+    nbChartIDFK String,
+    nbChartType String,
+    nbLastUpdated String,
+    nbLastUpdatedBy String
+}
+
+//relationship OneToMany {
+//	NBMapAttributes{nbPaletteIDFK} to NBPalette{nbPaletteID}
+//}
+entity NBPalette {
+	nbPaletteID String,
+    nbPaletteTitle String,
+    nbPaletteType String,
+    nbPaletteColors String,
+    nbLastUpdated String,
+    nbLastUpdatedBy String
+}
+
+// relationship OneToOne {
+//	NBMapAttributes{nbChartIDFK} to NBChart{nbChartID}
+//}
+entity NBChart {
+	nbChartID String,
+    nbChartTitle String,
+    nbChartType String,
+    nbChartParams String,
+    nbLastUpdated String,
+    nbLastUpdatedBy String
+}
+// an ignored comment
+/** not an ignored comment */
+entity NBMapComponents {
+	nbIDFK String,
+	nbComponentID String,
+	nbComponentType String,
+	nbComponentValue String,
+	nbDefault String,
+    nbLastUpdated String,
+    nbLastUpdatedBy String
+}
+
+entity NBMapComponentAttributes {
+	nbComponentIDFK String,
+    nbComponentName String,
+	nbLastUpdated String,
+    nbLastUpdatedBy String
+}
+
+//relationship OneToMany {
+//	NBMap{nbID} to NBMapAttributes{nbIDFK}
+//}
+
+//relationship OneToOne {
+//	NBMap{nbID} to NBMapComponents{nbIDFK}
+//}
+
+//relationship OneToMany {
+//	NBMapComponentAttributes{nbComponentIDFK} to NBMapComponents{nbComponentID}
+//}
+    

@@ -1,0 +1,52 @@
+<div class="row justify-content-center">
+  <div class="col-8">
+    <div *ngIf="nBPalette">
+      <h2 data-cy="nBPaletteDetailsHeading"><span jhiTranslate="nbSolarSurfaceApp.nBPalette.detail.title">NB Palette</span></h2>
+
+      <hr />
+
+      <jhi-alert-error></jhi-alert-error>
+
+      <jhi-alert></jhi-alert>
+
+      <dl class="row-md jh-entity-details">
+        <dt><span jhiTranslate="global.field.id">ID</span></dt>
+        <dd>
+          <span>{{ nBPalette.id }}</span>
+        </dd>
+        <dt><span jhiTranslate="nbSolarSurfaceApp.nBPalette.nbPaletteID">Nb Palette ID</span></dt>
+        <dd>
+          <span>{{ nBPalette.nbPaletteID }}</span>
+        </dd>
+        <dt><span jhiTranslate="nbSolarSurfaceApp.nBPalette.nbPaletteTitle">Nb Palette Title</span></dt>
+        <dd>
+          <span>{{ nBPalette.nbPaletteTitle }}</span>
+        </dd>
+        <dt><span jhiTranslate="nbSolarSurfaceApp.nBPalette.nbPaletteType">Nb Palette Type</span></dt>
+        <dd>
+          <span>{{ nBPalette.nbPaletteType }}</span>
+        </dd>
+        <dt><span jhiTranslate="nbSolarSurfaceApp.nBPalette.nbPaletteColors">Nb Palette Colors</span></dt>
+        <dd>
+          <span>{{ nBPalette.nbPaletteColors }}</span>
+        </dd>
+        <dt><span jhiTranslate="nbSolarSurfaceApp.nBPalette.nbLastUpdated">Nb Last Updated</span></dt>
+        <dd>
+          <span>{{ nBPalette.nbLastUpdated }}</span>
+        </dd>
+        <dt><span jhiTranslate="nbSolarSurfaceApp.nBPalette.nbLastUpdatedBy">Nb Last Updated By</span></dt>
+        <dd>
+          <span>{{ nBPalette.nbLastUpdatedBy }}</span>
+        </dd>
+      </dl>
+
+      <button type="submit" (click)="previousState()" class="btn btn-info" data-cy="entityDetailsBackButton">
+        <fa-icon icon="arrow-left"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back">Back</span>
+      </button>
+
+      <button type="button" [routerLink]="['/nb-palette', nBPalette.id, 'edit']" class="btn btn-primary">
+        <fa-icon icon="pencil-alt"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit">Edit</span>
+      </button>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,174 @@
+<div class="row justify-content-center">
+  <div class="col-8">
+    <form name="editForm" role="form" novalidate (ngSubmit)="save()" [formGroup]="editForm">
+      <h2 id="jhi-nb-user-heading" data-cy="NBUserCreateUpdateHeading" jhiTranslate="nbSolarSurfaceApp.nBUser.home.createOrEditLabel">
+        Create or edit a NB User
+      </h2>
+
+      <div>
+        <jhi-alert-error></jhi-alert-error>
+
+        <div class="form-group" [hidden]="editForm.get('id')!.value == null">
+          <label class="form-control-label" jhiTranslate="global.field.id" for="field_id">ID</label>
+          <input type="number" class="form-control" name="id" id="field_id" data-cy="id" formControlName="id" [readonly]="true" />
+        </div>
+
+        <div class="form-group">
+          <label class="form-control-label" jhiTranslate="nbSolarSurfaceApp.nBUser.nbUserID" for="field_nbUserID">Nb User ID</label>
+          <input type="text" class="form-control" name="nbUserID" id="field_nbUserID" data-cy="nbUserID" formControlName="nbUserID" />
+        </div>
+
+        <div class="form-group">
+          <label class="form-control-label" jhiTranslate="nbSolarSurfaceApp.nBUser.nbAuthType" for="field_nbAuthType">Nb Auth Type</label>
+          <input
+            type="text"
+            class="form-control"
+            name="nbAuthType"
+            id="field_nbAuthType"
+            data-cy="nbAuthType"
+            formControlName="nbAuthType"
+          />
+        </div>
+
+        <div class="form-group">
+          <label class="form-control-label" jhiTranslate="nbSolarSurfaceApp.nBUser.nbPasswordHash" for="field_nbPasswordHash"
+            >Nb Password Hash</label
+          >
+          <input
+            type="text"
+            class="form-control"
+            name="nbPasswordHash"
+            id="field_nbPasswordHash"
+            data-cy="nbPasswordHash"
+            formControlName="nbPasswordHash"
+          />
+        </div>
+
+        <div class="form-group">
+          <label class="form-control-label" jhiTranslate="nbSolarSurfaceApp.nBUser.nbFirstName" for="field_nbFirstName"
+            >Nb First Name</label
+          >
+          <input
+            type="text"
+            class="form-control"
+            name="nbFirstName"
+            id="field_nbFirstName"
+            data-cy="nbFirstName"
+            formControlName="nbFirstName"
+          />
+        </div>
+
+        <div class="form-group">
+          <label class="form-control-label" jhiTranslate="nbSolarSurfaceApp.nBUser.nbLastName" for="field_nbLastName">Nb Last Name</label>
+          <input
+            type="text"
+            class="form-control"
+            name="nbLastName"
+            id="field_nbLastName"
+            data-cy="nbLastName"
+            formControlName="nbLastName"
+          />
+        </div>
+
+        <div class="form-group">
+          <label class="form-control-label" jhiTranslate="nbSolarSurfaceApp.nBUser.nbAddress" for="field_nbAddress">Nb Address</label>
+          <input type="text" class="form-control" name="nbAddress" id="field_nbAddress" data-cy="nbAddress" formControlName="nbAddress" />
+        </div>
+
+        <div class="form-group">
+          <label class="form-control-label" jhiTranslate="nbSolarSurfaceApp.nBUser.nbEmailId" for="field_nbEmailId">Nb Email Id</label>
+          <input type="text" class="form-control" name="nbEmailId" id="field_nbEmailId" data-cy="nbEmailId" formControlName="nbEmailId" />
+        </div>
+
+        <div class="form-group">
+          <label class="form-control-label" jhiTranslate="nbSolarSurfaceApp.nBUser.nbPhone" for="field_nbPhone">Nb Phone</label>
+          <input type="text" class="form-control" name="nbPhone" id="field_nbPhone" data-cy="nbPhone" formControlName="nbPhone" />
+        </div>
+
+        <div class="form-group">
+          <label class="form-control-label" jhiTranslate="nbSolarSurfaceApp.nBUser.nbIsActive" for="field_nbIsActive">Nb Is Active</label>
+          <input
+            type="text"
+            class="form-control"
+            name="nbIsActive"
+            id="field_nbIsActive"
+            data-cy="nbIsActive"
+            formControlName="nbIsActive"
+          />
+        </div>
+
+        <div class="form-group">
+          <label class="form-control-label" jhiTranslate="nbSolarSurfaceApp.nBUser.nbIsSuspended" for="field_nbIsSuspended"
+            >Nb Is Suspended</label
+          >
+          <input
+            type="text"
+            class="form-control"
+            name="nbIsSuspended"
+            id="field_nbIsSuspended"
+            data-cy="nbIsSuspended"
+            formControlName="nbIsSuspended"
+          />
+        </div>
+
+        <div class="form-group">
+          <label class="form-control-label" jhiTranslate="nbSolarSurfaceApp.nBUser.nbIsBanished" for="field_nbIsBanished"
+            >Nb Is Banished</label
+          >
+          <input
+            type="text"
+            class="form-control"
+            name="nbIsBanished"
+            id="field_nbIsBanished"
+            data-cy="nbIsBanished"
+            formControlName="nbIsBanished"
+          />
+        </div>
+
+        <div class="form-group">
+          <label class="form-control-label" jhiTranslate="nbSolarSurfaceApp.nBUser.nbLastUpdated" for="field_nbLastUpdated"
+            >Nb Last Updated</label
+          >
+          <input
+            type="text"
+            class="form-control"
+            name="nbLastUpdated"
+            id="field_nbLastUpdated"
+            data-cy="nbLastUpdated"
+            formControlName="nbLastUpdated"
+          />
+        </div>
+
+        <div class="form-group">
+          <label class="form-control-label" jhiTranslate="nbSolarSurfaceApp.nBUser.nbLastUpdatedBy" for="field_nbLastUpdatedBy"
+            >Nb Last Updated By</label
+          >
+          <input
+            type="text"
+            class="form-control"
+            name="nbLastUpdatedBy"
+            id="field_nbLastUpdatedBy"
+            data-cy="nbLastUpdatedBy"
+            formControlName="nbLastUpdatedBy"
+          />
+        </div>
+      </div>
+
+      <div>
+        <button type="button" id="cancel-save" data-cy="entityCreateCancelButton" class="btn btn-secondary" (click)="previousState()">
+          <fa-icon icon="ban"></fa-icon>&nbsp;<span jhiTranslate="entity.action.cancel">Cancel</span>
+        </button>
+
+        <button
+          type="submit"
+          id="save-entity"
+          data-cy="entityCreateSaveButton"
+          [disabled]="editForm.invalid || isSaving"
+          class="btn btn-primary"
+        >
+          <fa-icon icon="save"></fa-icon>&nbsp;<span jhiTranslate="entity.action.save">Save</span>
+        </button>
+      </div>
+    </form>
+  </div>
+</div>

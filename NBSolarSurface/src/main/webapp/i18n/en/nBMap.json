@@ -1,0 +1,33 @@
+{
+  "nbSolarSurfaceApp": {
+    "nBMap": {
+      "home": {
+        "title": "NB Maps",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Create a new NB Map",
+        "createOrEditLabel": "Create or edit a NB Map",
+        "notFound": "No NB Maps found"
+      },
+      "created": "A new NB Map is created with identifier {{ param }}",
+      "updated": "A NB Map is updated with identifier {{ param }}",
+      "deleted": "A NB Map is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete NB Map {{ id }}?"
+      },
+      "detail": {
+        "title": "NB Map"
+      },
+      "id": "ID",
+      "nbID": "Nb ID",
+      "nbName": "Nb Name",
+      "nbOwner": "Nb Owner",
+      "nbOwnerPrivateKey": "Nb Owner Private Key",
+      "nbOwnerPublicKey": "Nb Owner Public Key",
+      "nbMapPublishMethod": "Nb Map Publish Method",
+      "nbSubscriptionDate": "Nb Subscription Date",
+      "nbSubscriptionLastDate": "Nb Subscription Last Date",
+      "nbLastUpdated": "Nb Last Updated",
+      "nbLastUpdatedBy": "Nb Last Updated By"
+    }
+  }
+}

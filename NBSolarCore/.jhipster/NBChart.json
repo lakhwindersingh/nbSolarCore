@@ -1,0 +1,43 @@
+{
+  "name": "NBChart",
+  "fields": [
+    {
+      "fieldName": "nbChartID",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "nbChartTitle",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "nbChartType",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "nbChartParams",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "nbLastUpdated",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "nbLastUpdatedBy",
+      "fieldType": "String"
+    }
+  ],
+  "relationships": [],
+  "entityTableName": "nb_chart",
+  "dto": "no",
+  "pagination": "no",
+  "service": "no",
+  "jpaMetamodelFiltering": false,
+  "fluentMethods": true,
+  "readOnly": false,
+  "embedded": false,
+  "applications": ["NBSolarSurface", "NBSolarCore"],
+  "microserviceName": "NBSolarCore",
+  "clientRootFolder": "NBSolarCore",
+  "databaseType": "sql",
+  "changelogDate": "20211106151427"
+}

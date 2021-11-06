@@ -1,0 +1,51 @@
+{
+  "name": "NBMapAttributes",
+  "fields": [
+    {
+      "fieldName": "nbIDFK",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "nbTitle",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "nbTitleLocation",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "nbPaletteIDFK",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "nbChartIDFK",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "nbChartType",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "nbLastUpdated",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "nbLastUpdatedBy",
+      "fieldType": "String"
+    }
+  ],
+  "relationships": [],
+  "entityTableName": "nb_map_attributes",
+  "dto": "no",
+  "pagination": "no",
+  "service": "no",
+  "jpaMetamodelFiltering": false,
+  "fluentMethods": true,
+  "readOnly": false,
+  "embedded": false,
+  "applications": ["NBSolarCore"],
+  "microserviceName": "NBSolarCore",
+  "clientRootFolder": "NBSolarCore",
+  "databaseType": "sql",
+  "changelogDate": "20211106151827"
+}

@@ -1,0 +1,71 @@
+{
+  "name": "NBUser",
+  "fields": [
+    {
+      "fieldName": "nbUserID",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "nbAuthType",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "nbPasswordHash",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "nbFirstName",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "nbLastName",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "nbAddress",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "nbEmailId",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "nbPhone",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "nbIsActive",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "nbIsSuspended",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "nbIsBanished",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "nbLastUpdated",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "nbLastUpdatedBy",
+      "fieldType": "String"
+    }
+  ],
+  "relationships": [],
+  "entityTableName": "nb_user",
+  "dto": "no",
+  "pagination": "no",
+  "service": "no",
+  "jpaMetamodelFiltering": false,
+  "fluentMethods": true,
+  "readOnly": false,
+  "embedded": false,
+  "applications": ["NBSolarSurface", "NBSolarCore"],
+  "microserviceName": "NBSolarCore",
+  "clientRootFolder": "NBSolarCore",
+  "databaseType": "sql",
+  "changelogDate": "20211106151627"
+}

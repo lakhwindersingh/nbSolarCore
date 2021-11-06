@@ -1,0 +1,36 @@
+{
+  "nbSolarSurfaceApp": {
+    "nBUser": {
+      "home": {
+        "title": "NB Users",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Create a new NB User",
+        "createOrEditLabel": "Create or edit a NB User",
+        "notFound": "No NB Users found"
+      },
+      "created": "A new NB User is created with identifier {{ param }}",
+      "updated": "A NB User is updated with identifier {{ param }}",
+      "deleted": "A NB User is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete NB User {{ id }}?"
+      },
+      "detail": {
+        "title": "NB User"
+      },
+      "id": "ID",
+      "nbUserID": "Nb User ID",
+      "nbAuthType": "Nb Auth Type",
+      "nbPasswordHash": "Nb Password Hash",
+      "nbFirstName": "Nb First Name",
+      "nbLastName": "Nb Last Name",
+      "nbAddress": "Nb Address",
+      "nbEmailId": "Nb Email Id",
+      "nbPhone": "Nb Phone",
+      "nbIsActive": "Nb Is Active",
+      "nbIsSuspended": "Nb Is Suspended",
+      "nbIsBanished": "Nb Is Banished",
+      "nbLastUpdated": "Nb Last Updated",
+      "nbLastUpdatedBy": "Nb Last Updated By"
+    }
+  }
+}

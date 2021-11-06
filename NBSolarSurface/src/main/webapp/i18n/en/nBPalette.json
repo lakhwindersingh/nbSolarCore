@@ -1,0 +1,29 @@
+{
+  "nbSolarSurfaceApp": {
+    "nBPalette": {
+      "home": {
+        "title": "NB Palettes",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Create a new NB Palette",
+        "createOrEditLabel": "Create or edit a NB Palette",
+        "notFound": "No NB Palettes found"
+      },
+      "created": "A new NB Palette is created with identifier {{ param }}",
+      "updated": "A NB Palette is updated with identifier {{ param }}",
+      "deleted": "A NB Palette is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete NB Palette {{ id }}?"
+      },
+      "detail": {
+        "title": "NB Palette"
+      },
+      "id": "ID",
+      "nbPaletteID": "Nb Palette ID",
+      "nbPaletteTitle": "Nb Palette Title",
+      "nbPaletteType": "Nb Palette Type",
+      "nbPaletteColors": "Nb Palette Colors",
+      "nbLastUpdated": "Nb Last Updated",
+      "nbLastUpdatedBy": "Nb Last Updated By"
+    }
+  }
+}

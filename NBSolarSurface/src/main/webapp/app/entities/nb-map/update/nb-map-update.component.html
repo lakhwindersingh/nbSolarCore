@@ -1,0 +1,147 @@
+<div class="row justify-content-center">
+  <div class="col-8">
+    <form name="editForm" role="form" novalidate (ngSubmit)="save()" [formGroup]="editForm">
+      <h2 id="jhi-nb-map-heading" data-cy="NBMapCreateUpdateHeading" jhiTranslate="nbSolarSurfaceApp.nBMap.home.createOrEditLabel">
+        Create or edit a NB Map
+      </h2>
+
+      <div>
+        <jhi-alert-error></jhi-alert-error>
+
+        <div class="form-group" [hidden]="editForm.get('id')!.value == null">
+          <label class="form-control-label" jhiTranslate="global.field.id" for="field_id">ID</label>
+          <input type="number" class="form-control" name="id" id="field_id" data-cy="id" formControlName="id" [readonly]="true" />
+        </div>
+
+        <div class="form-group">
+          <label class="form-control-label" jhiTranslate="nbSolarSurfaceApp.nBMap.nbID" for="field_nbID">Nb ID</label>
+          <input type="text" class="form-control" name="nbID" id="field_nbID" data-cy="nbID" formControlName="nbID" />
+        </div>
+
+        <div class="form-group">
+          <label class="form-control-label" jhiTranslate="nbSolarSurfaceApp.nBMap.nbName" for="field_nbName">Nb Name</label>
+          <input type="text" class="form-control" name="nbName" id="field_nbName" data-cy="nbName" formControlName="nbName" />
+        </div>
+
+        <div class="form-group">
+          <label class="form-control-label" jhiTranslate="nbSolarSurfaceApp.nBMap.nbOwner" for="field_nbOwner">Nb Owner</label>
+          <input type="text" class="form-control" name="nbOwner" id="field_nbOwner" data-cy="nbOwner" formControlName="nbOwner" />
+        </div>
+
+        <div class="form-group">
+          <label class="form-control-label" jhiTranslate="nbSolarSurfaceApp.nBMap.nbOwnerPrivateKey" for="field_nbOwnerPrivateKey"
+            >Nb Owner Private Key</label
+          >
+          <input
+            type="text"
+            class="form-control"
+            name="nbOwnerPrivateKey"
+            id="field_nbOwnerPrivateKey"
+            data-cy="nbOwnerPrivateKey"
+            formControlName="nbOwnerPrivateKey"
+          />
+        </div>
+
+        <div class="form-group">
+          <label class="form-control-label" jhiTranslate="nbSolarSurfaceApp.nBMap.nbOwnerPublicKey" for="field_nbOwnerPublicKey"
+            >Nb Owner Public Key</label
+          >
+          <input
+            type="text"
+            class="form-control"
+            name="nbOwnerPublicKey"
+            id="field_nbOwnerPublicKey"
+            data-cy="nbOwnerPublicKey"
+            formControlName="nbOwnerPublicKey"
+          />
+        </div>
+
+        <div class="form-group">
+          <label class="form-control-label" jhiTranslate="nbSolarSurfaceApp.nBMap.nbMapPublishMethod" for="field_nbMapPublishMethod"
+            >Nb Map Publish Method</label
+          >
+          <input
+            type="text"
+            class="form-control"
+            name="nbMapPublishMethod"
+            id="field_nbMapPublishMethod"
+            data-cy="nbMapPublishMethod"
+            formControlName="nbMapPublishMethod"
+          />
+        </div>
+
+        <div class="form-group">
+          <label class="form-control-label" jhiTranslate="nbSolarSurfaceApp.nBMap.nbSubscriptionDate" for="field_nbSubscriptionDate"
+            >Nb Subscription Date</label
+          >
+          <input
+            type="text"
+            class="form-control"
+            name="nbSubscriptionDate"
+            id="field_nbSubscriptionDate"
+            data-cy="nbSubscriptionDate"
+            formControlName="nbSubscriptionDate"
+          />
+        </div>
+
+        <div class="form-group">
+          <label class="form-control-label" jhiTranslate="nbSolarSurfaceApp.nBMap.nbSubscriptionLastDate" for="field_nbSubscriptionLastDate"
+            >Nb Subscription Last Date</label
+          >
+          <input
+            type="text"
+            class="form-control"
+            name="nbSubscriptionLastDate"
+            id="field_nbSubscriptionLastDate"
+            data-cy="nbSubscriptionLastDate"
+            formControlName="nbSubscriptionLastDate"
+          />
+        </div>
+
+        <div class="form-group">
+          <label class="form-control-label" jhiTranslate="nbSolarSurfaceApp.nBMap.nbLastUpdated" for="field_nbLastUpdated"
+            >Nb Last Updated</label
+          >
+          <input
+            type="text"
+            class="form-control"
+            name="nbLastUpdated"
+            id="field_nbLastUpdated"
+            data-cy="nbLastUpdated"
+            formControlName="nbLastUpdated"
+          />
+        </div>
+
+        <div class="form-group">
+          <label class="form-control-label" jhiTranslate="nbSolarSurfaceApp.nBMap.nbLastUpdatedBy" for="field_nbLastUpdatedBy"
+            >Nb Last Updated By</label
+          >
+          <input
+            type="text"
+            class="form-control"
+            name="nbLastUpdatedBy"
+            id="field_nbLastUpdatedBy"
+            data-cy="nbLastUpdatedBy"
+            formControlName="nbLastUpdatedBy"
+          />
+        </div>
+      </div>
+
+      <div>
+        <button type="button" id="cancel-save" data-cy="entityCreateCancelButton" class="btn btn-secondary" (click)="previousState()">
+          <fa-icon icon="ban"></fa-icon>&nbsp;<span jhiTranslate="entity.action.cancel">Cancel</span>
+        </button>
+
+        <button
+          type="submit"
+          id="save-entity"
+          data-cy="entityCreateSaveButton"
+          [disabled]="editForm.invalid || isSaving"
+          class="btn btn-primary"
+        >
+          <fa-icon icon="save"></fa-icon>&nbsp;<span jhiTranslate="entity.action.save">Save</span>
+        </button>
+      </div>
+    </form>
+  </div>
+</div>

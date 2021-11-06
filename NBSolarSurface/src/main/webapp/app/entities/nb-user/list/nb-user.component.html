@@ -1,0 +1,102 @@
+<div>
+  <h2 id="page-heading" data-cy="NBUserHeading">
+    <span jhiTranslate="nbSolarSurfaceApp.nBUser.home.title">NB Users</span>
+
+    <div class="d-flex justify-content-end">
+      <button class="btn btn-info mr-2" (click)="loadAll()" [disabled]="isLoading">
+        <fa-icon icon="sync" [spin]="isLoading"></fa-icon>
+        <span jhiTranslate="nbSolarSurfaceApp.nBUser.home.refreshListLabel">Refresh List</span>
+      </button>
+
+      <button
+        id="jh-create-entity"
+        data-cy="entityCreateButton"
+        class="btn btn-primary jh-create-entity create-nb-user"
+        [routerLink]="['/nb-user/new']"
+      >
+        <fa-icon icon="plus"></fa-icon>
+        <span jhiTranslate="nbSolarSurfaceApp.nBUser.home.createLabel"> Create a new NB User </span>
+      </button>
+    </div>
+  </h2>
+
+  <jhi-alert-error></jhi-alert-error>
+
+  <jhi-alert></jhi-alert>
+
+  <div class="alert alert-warning" id="no-result" *ngIf="nBUsers?.length === 0">
+    <span jhiTranslate="nbSolarSurfaceApp.nBUser.home.notFound">No nBUsers found</span>
+  </div>
+
+  <div class="table-responsive" id="entities" *ngIf="nBUsers && nBUsers.length > 0">
+    <table class="table table-striped" aria-describedby="page-heading">
+      <thead>
+        <tr>
+          <th scope="col"><span jhiTranslate="global.field.id">ID</span></th>
+          <th scope="col"><span jhiTranslate="nbSolarSurfaceApp.nBUser.nbUserID">Nb User ID</span></th>
+          <th scope="col"><span jhiTranslate="nbSolarSurfaceApp.nBUser.nbAuthType">Nb Auth Type</span></th>
+          <th scope="col"><span jhiTranslate="nbSolarSurfaceApp.nBUser.nbPasswordHash">Nb Password Hash</span></th>
+          <th scope="col"><span jhiTranslate="nbSolarSurfaceApp.nBUser.nbFirstName">Nb First Name</span></th>
+          <th scope="col"><span jhiTranslate="nbSolarSurfaceApp.nBUser.nbLastName">Nb Last Name</span></th>
+          <th scope="col"><span jhiTranslate="nbSolarSurfaceApp.nBUser.nbAddress">Nb Address</span></th>
+          <th scope="col"><span jhiTranslate="nbSolarSurfaceApp.nBUser.nbEmailId">Nb Email Id</span></th>
+          <th scope="col"><span jhiTranslate="nbSolarSurfaceApp.nBUser.nbPhone">Nb Phone</span></th>
+          <th scope="col"><span jhiTranslate="nbSolarSurfaceApp.nBUser.nbIsActive">Nb Is Active</span></th>
+          <th scope="col"><span jhiTranslate="nbSolarSurfaceApp.nBUser.nbIsSuspended">Nb Is Suspended</span></th>
+          <th scope="col"><span jhiTranslate="nbSolarSurfaceApp.nBUser.nbIsBanished">Nb Is Banished</span></th>
+          <th scope="col"><span jhiTranslate="nbSolarSurfaceApp.nBUser.nbLastUpdated">Nb Last Updated</span></th>
+          <th scope="col"><span jhiTranslate="nbSolarSurfaceApp.nBUser.nbLastUpdatedBy">Nb Last Updated By</span></th>
+          <th scope="col"></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let nBUser of nBUsers; trackBy: trackId" data-cy="entityTable">
+          <td>
+            <a [routerLink]="['/nb-user', nBUser.id, 'view']">{{ nBUser.id }}</a>
+          </td>
+          <td>{{ nBUser.nbUserID }}</td>
+          <td>{{ nBUser.nbAuthType }}</td>
+          <td>{{ nBUser.nbPasswordHash }}</td>
+          <td>{{ nBUser.nbFirstName }}</td>
+          <td>{{ nBUser.nbLastName }}</td>
+          <td>{{ nBUser.nbAddress }}</td>
+          <td>{{ nBUser.nbEmailId }}</td>
+          <td>{{ nBUser.nbPhone }}</td>
+          <td>{{ nBUser.nbIsActive }}</td>
+          <td>{{ nBUser.nbIsSuspended }}</td>
+          <td>{{ nBUser.nbIsBanished }}</td>
+          <td>{{ nBUser.nbLastUpdated }}</td>
+          <td>{{ nBUser.nbLastUpdatedBy }}</td>
+          <td class="text-right">
+            <div class="btn-group">
+              <button
+                type="submit"
+                [routerLink]="['/nb-user', nBUser.id, 'view']"
+                class="btn btn-info btn-sm"
+                data-cy="entityDetailsButton"
+              >
+                <fa-icon icon="eye"></fa-icon>
+                <span class="d-none d-md-inline" jhiTranslate="entity.action.view">View</span>
+              </button>
+
+              <button
+                type="submit"
+                [routerLink]="['/nb-user', nBUser.id, 'edit']"
+                class="btn btn-primary btn-sm"
+                data-cy="entityEditButton"
+              >
+                <fa-icon icon="pencil-alt"></fa-icon>
+                <span class="d-none d-md-inline" jhiTranslate="entity.action.edit">Edit</span>
+              </button>
+
+              <button type="submit" (click)="delete(nBUser)" class="btn btn-danger btn-sm" data-cy="entityDeleteButton">
+                <fa-icon icon="times"></fa-icon>
+                <span class="d-none d-md-inline" jhiTranslate="entity.action.delete">Delete</span>
+              </button>
+            </div>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

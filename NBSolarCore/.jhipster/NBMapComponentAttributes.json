@@ -1,0 +1,35 @@
+{
+  "name": "NBMapComponentAttributes",
+  "fields": [
+    {
+      "fieldName": "nbComponentIDFK",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "nbComponentName",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "nbLastUpdated",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "nbLastUpdatedBy",
+      "fieldType": "String"
+    }
+  ],
+  "relationships": [],
+  "entityTableName": "nb_map_component_attributes",
+  "dto": "no",
+  "pagination": "no",
+  "service": "no",
+  "jpaMetamodelFiltering": false,
+  "fluentMethods": true,
+  "readOnly": false,
+  "embedded": false,
+  "applications": ["NBSolarCore"],
+  "microserviceName": "NBSolarCore",
+  "clientRootFolder": "NBSolarCore",
+  "databaseType": "sql",
+  "changelogDate": "20211106151327"
+}

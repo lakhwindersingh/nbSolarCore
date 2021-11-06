@@ -1,0 +1,109 @@
+<div class="row justify-content-center">
+  <div class="col-8">
+    <form name="editForm" role="form" novalidate (ngSubmit)="save()" [formGroup]="editForm">
+      <h2 id="jhi-nb-chart-heading" data-cy="NBChartCreateUpdateHeading" jhiTranslate="nbSolarSurfaceApp.nBChart.home.createOrEditLabel">
+        Create or edit a NB Chart
+      </h2>
+
+      <div>
+        <jhi-alert-error></jhi-alert-error>
+
+        <div class="form-group" [hidden]="editForm.get('id')!.value == null">
+          <label class="form-control-label" jhiTranslate="global.field.id" for="field_id">ID</label>
+          <input type="number" class="form-control" name="id" id="field_id" data-cy="id" formControlName="id" [readonly]="true" />
+        </div>
+
+        <div class="form-group">
+          <label class="form-control-label" jhiTranslate="nbSolarSurfaceApp.nBChart.nbChartID" for="field_nbChartID">Nb Chart ID</label>
+          <input type="text" class="form-control" name="nbChartID" id="field_nbChartID" data-cy="nbChartID" formControlName="nbChartID" />
+        </div>
+
+        <div class="form-group">
+          <label class="form-control-label" jhiTranslate="nbSolarSurfaceApp.nBChart.nbChartTitle" for="field_nbChartTitle"
+            >Nb Chart Title</label
+          >
+          <input
+            type="text"
+            class="form-control"
+            name="nbChartTitle"
+            id="field_nbChartTitle"
+            data-cy="nbChartTitle"
+            formControlName="nbChartTitle"
+          />
+        </div>
+
+        <div class="form-group">
+          <label class="form-control-label" jhiTranslate="nbSolarSurfaceApp.nBChart.nbChartType" for="field_nbChartType"
+            >Nb Chart Type</label
+          >
+          <input
+            type="text"
+            class="form-control"
+            name="nbChartType"
+            id="field_nbChartType"
+            data-cy="nbChartType"
+            formControlName="nbChartType"
+          />
+        </div>
+
+        <div class="form-group">
+          <label class="form-control-label" jhiTranslate="nbSolarSurfaceApp.nBChart.nbChartParams" for="field_nbChartParams"
+            >Nb Chart Params</label
+          >
+          <input
+            type="text"
+            class="form-control"
+            name="nbChartParams"
+            id="field_nbChartParams"
+            data-cy="nbChartParams"
+            formControlName="nbChartParams"
+          />
+        </div>
+
+        <div class="form-group">
+          <label class="form-control-label" jhiTranslate="nbSolarSurfaceApp.nBChart.nbLastUpdated" for="field_nbLastUpdated"
+            >Nb Last Updated</label
+          >
+          <input
+            type="text"
+            class="form-control"
+            name="nbLastUpdated"
+            id="field_nbLastUpdated"
+            data-cy="nbLastUpdated"
+            formControlName="nbLastUpdated"
+          />
+        </div>
+
+        <div class="form-group">
+          <label class="form-control-label" jhiTranslate="nbSolarSurfaceApp.nBChart.nbLastUpdatedBy" for="field_nbLastUpdatedBy"
+            >Nb Last Updated By</label
+          >
+          <input
+            type="text"
+            class="form-control"
+            name="nbLastUpdatedBy"
+            id="field_nbLastUpdatedBy"
+            data-cy="nbLastUpdatedBy"
+            formControlName="nbLastUpdatedBy"
+          />
+        </div>
+      </div>
+
+      <div>
+        <button type="button" id="cancel-save" data-cy="entityCreateCancelButton" class="btn btn-secondary" (click)="previousState()">
+          <fa-icon icon="ban"></fa-icon>&nbsp;<span jhiTranslate="entity.action.cancel">Cancel</span>
+        </button>
+
+        <button
+          type="submit"
+          id="save-entity"
+          data-cy="entityCreateSaveButton"
+          [disabled]="editForm.invalid || isSaving"
+          class="btn btn-primary"
+        >
+          <fa-icon icon="save"></fa-icon>&nbsp;<span jhiTranslate="entity.action.save">Save</span>
+        </button>
+      </div>
+    </form>
+  </div>
+</div>

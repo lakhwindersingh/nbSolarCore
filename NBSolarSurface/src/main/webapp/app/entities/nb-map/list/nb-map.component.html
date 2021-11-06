@@ -1,0 +1,86 @@
+<div>
+  <h2 id="page-heading" data-cy="NBMapHeading">
+    <span jhiTranslate="nbSolarSurfaceApp.nBMap.home.title">NB Maps</span>
+
+    <div class="d-flex justify-content-end">
+      <button class="btn btn-info mr-2" (click)="loadAll()" [disabled]="isLoading">
+        <fa-icon icon="sync" [spin]="isLoading"></fa-icon>
+        <span jhiTranslate="nbSolarSurfaceApp.nBMap.home.refreshListLabel">Refresh List</span>
+      </button>
+
+      <button
+        id="jh-create-entity"
+        data-cy="entityCreateButton"
+        class="btn btn-primary jh-create-entity create-nb-map"
+        [routerLink]="['/nb-map/new']"
+      >
+        <fa-icon icon="plus"></fa-icon>
+        <span jhiTranslate="nbSolarSurfaceApp.nBMap.home.createLabel"> Create a new NB Map </span>
+      </button>
+    </div>
+  </h2>
+
+  <jhi-alert-error></jhi-alert-error>
+
+  <jhi-alert></jhi-alert>
+
+  <div class="alert alert-warning" id="no-result" *ngIf="nBMaps?.length === 0">
+    <span jhiTranslate="nbSolarSurfaceApp.nBMap.home.notFound">No nBMaps found</span>
+  </div>
+
+  <div class="table-responsive" id="entities" *ngIf="nBMaps && nBMaps.length > 0">
+    <table class="table table-striped" aria-describedby="page-heading">
+      <thead>
+        <tr>
+          <th scope="col"><span jhiTranslate="global.field.id">ID</span></th>
+          <th scope="col"><span jhiTranslate="nbSolarSurfaceApp.nBMap.nbID">Nb ID</span></th>
+          <th scope="col"><span jhiTranslate="nbSolarSurfaceApp.nBMap.nbName">Nb Name</span></th>
+          <th scope="col"><span jhiTranslate="nbSolarSurfaceApp.nBMap.nbOwner">Nb Owner</span></th>
+          <th scope="col"><span jhiTranslate="nbSolarSurfaceApp.nBMap.nbOwnerPrivateKey">Nb Owner Private Key</span></th>
+          <th scope="col"><span jhiTranslate="nbSolarSurfaceApp.nBMap.nbOwnerPublicKey">Nb Owner Public Key</span></th>
+          <th scope="col"><span jhiTranslate="nbSolarSurfaceApp.nBMap.nbMapPublishMethod">Nb Map Publish Method</span></th>
+          <th scope="col"><span jhiTranslate="nbSolarSurfaceApp.nBMap.nbSubscriptionDate">Nb Subscription Date</span></th>
+          <th scope="col"><span jhiTranslate="nbSolarSurfaceApp.nBMap.nbSubscriptionLastDate">Nb Subscription Last Date</span></th>
+          <th scope="col"><span jhiTranslate="nbSolarSurfaceApp.nBMap.nbLastUpdated">Nb Last Updated</span></th>
+          <th scope="col"><span jhiTranslate="nbSolarSurfaceApp.nBMap.nbLastUpdatedBy">Nb Last Updated By</span></th>
+          <th scope="col"></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let nBMap of nBMaps; trackBy: trackId" data-cy="entityTable">
+          <td>
+            <a [routerLink]="['/nb-map', nBMap.id, 'view']">{{ nBMap.id }}</a>
+          </td>
+          <td>{{ nBMap.nbID }}</td>
+          <td>{{ nBMap.nbName }}</td>
+          <td>{{ nBMap.nbOwner }}</td>
+          <td>{{ nBMap.nbOwnerPrivateKey }}</td>
+          <td>{{ nBMap.nbOwnerPublicKey }}</td>
+          <td>{{ nBMap.nbMapPublishMethod }}</td>
+          <td>{{ nBMap.nbSubscriptionDate }}</td>
+          <td>{{ nBMap.nbSubscriptionLastDate }}</td>
+          <td>{{ nBMap.nbLastUpdated }}</td>
+          <td>{{ nBMap.nbLastUpdatedBy }}</td>
+          <td class="text-right">
+            <div class="btn-group">
+              <button type="submit" [routerLink]="['/nb-map', nBMap.id, 'view']" class="btn btn-info btn-sm" data-cy="entityDetailsButton">
+                <fa-icon icon="eye"></fa-icon>
+                <span class="d-none d-md-inline" jhiTranslate="entity.action.view">View</span>
+              </button>
+
+              <button type="submit" [routerLink]="['/nb-map', nBMap.id, 'edit']" class="btn btn-primary btn-sm" data-cy="entityEditButton">
+                <fa-icon icon="pencil-alt"></fa-icon>
+                <span class="d-none d-md-inline" jhiTranslate="entity.action.edit">Edit</span>
+              </button>
+
+              <button type="submit" (click)="delete(nBMap)" class="btn btn-danger btn-sm" data-cy="entityDeleteButton">
+                <fa-icon icon="times"></fa-icon>
+                <span class="d-none d-md-inline" jhiTranslate="entity.action.delete">Delete</span>
+              </button>
+            </div>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

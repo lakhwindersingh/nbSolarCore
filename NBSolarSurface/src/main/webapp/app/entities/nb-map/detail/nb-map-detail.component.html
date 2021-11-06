@@ -1,0 +1,68 @@
+<div class="row justify-content-center">
+  <div class="col-8">
+    <div *ngIf="nBMap">
+      <h2 data-cy="nBMapDetailsHeading"><span jhiTranslate="nbSolarSurfaceApp.nBMap.detail.title">NB Map</span></h2>
+
+      <hr />
+
+      <jhi-alert-error></jhi-alert-error>
+
+      <jhi-alert></jhi-alert>
+
+      <dl class="row-md jh-entity-details">
+        <dt><span jhiTranslate="global.field.id">ID</span></dt>
+        <dd>
+          <span>{{ nBMap.id }}</span>
+        </dd>
+        <dt><span jhiTranslate="nbSolarSurfaceApp.nBMap.nbID">Nb ID</span></dt>
+        <dd>
+          <span>{{ nBMap.nbID }}</span>
+        </dd>
+        <dt><span jhiTranslate="nbSolarSurfaceApp.nBMap.nbName">Nb Name</span></dt>
+        <dd>
+          <span>{{ nBMap.nbName }}</span>
+        </dd>
+        <dt><span jhiTranslate="nbSolarSurfaceApp.nBMap.nbOwner">Nb Owner</span></dt>
+        <dd>
+          <span>{{ nBMap.nbOwner }}</span>
+        </dd>
+        <dt><span jhiTranslate="nbSolarSurfaceApp.nBMap.nbOwnerPrivateKey">Nb Owner Private Key</span></dt>
+        <dd>
+          <span>{{ nBMap.nbOwnerPrivateKey }}</span>
+        </dd>
+        <dt><span jhiTranslate="nbSolarSurfaceApp.nBMap.nbOwnerPublicKey">Nb Owner Public Key</span></dt>
+        <dd>
+          <span>{{ nBMap.nbOwnerPublicKey }}</span>
+        </dd>
+        <dt><span jhiTranslate="nbSolarSurfaceApp.nBMap.nbMapPublishMethod">Nb Map Publish Method</span></dt>
+        <dd>
+          <span>{{ nBMap.nbMapPublishMethod }}</span>
+        </dd>
+        <dt><span jhiTranslate="nbSolarSurfaceApp.nBMap.nbSubscriptionDate">Nb Subscription Date</span></dt>
+        <dd>
+          <span>{{ nBMap.nbSubscriptionDate }}</span>
+        </dd>
+        <dt><span jhiTranslate="nbSolarSurfaceApp.nBMap.nbSubscriptionLastDate">Nb Subscription Last Date</span></dt>
+        <dd>
+          <span>{{ nBMap.nbSubscriptionLastDate }}</span>
+        </dd>
+        <dt><span jhiTranslate="nbSolarSurfaceApp.nBMap.nbLastUpdated">Nb Last Updated</span></dt>
+        <dd>
+          <span>{{ nBMap.nbLastUpdated }}</span>
+        </dd>
+        <dt><span jhiTranslate="nbSolarSurfaceApp.nBMap.nbLastUpdatedBy">Nb Last Updated By</span></dt>
+        <dd>
+          <span>{{ nBMap.nbLastUpdatedBy }}</span>
+        </dd>
+      </dl>
+
+      <button type="submit" (click)="previousState()" class="btn btn-info" data-cy="entityDetailsBackButton">
+        <fa-icon icon="arrow-left"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back">Back</span>
+      </button>
+
+      <button type="button" [routerLink]="['/nb-map', nBMap.id, 'edit']" class="btn btn-primary">
+        <fa-icon icon="pencil-alt"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit">Edit</span>
+      </button>
+    </div>
+  </div>
+</div>

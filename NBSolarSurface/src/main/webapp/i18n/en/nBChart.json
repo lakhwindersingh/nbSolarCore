@@ -1,0 +1,29 @@
+{
+  "nbSolarSurfaceApp": {
+    "nBChart": {
+      "home": {
+        "title": "NB Charts",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Create a new NB Chart",
+        "createOrEditLabel": "Create or edit a NB Chart",
+        "notFound": "No NB Charts found"
+      },
+      "created": "A new NB Chart is created with identifier {{ param }}",
+      "updated": "A NB Chart is updated with identifier {{ param }}",
+      "deleted": "A NB Chart is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete NB Chart {{ id }}?"
+      },
+      "detail": {
+        "title": "NB Chart"
+      },
+      "id": "ID",
+      "nbChartID": "Nb Chart ID",
+      "nbChartTitle": "Nb Chart Title",
+      "nbChartType": "Nb Chart Type",
+      "nbChartParams": "Nb Chart Params",
+      "nbLastUpdated": "Nb Last Updated",
+      "nbLastUpdatedBy": "Nb Last Updated By"
+    }
+  }
+}

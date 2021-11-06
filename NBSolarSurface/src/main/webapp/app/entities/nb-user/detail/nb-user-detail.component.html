@@ -1,0 +1,80 @@
+<div class="row justify-content-center">
+  <div class="col-8">
+    <div *ngIf="nBUser">
+      <h2 data-cy="nBUserDetailsHeading"><span jhiTranslate="nbSolarSurfaceApp.nBUser.detail.title">NB User</span></h2>
+
+      <hr />
+
+      <jhi-alert-error></jhi-alert-error>
+
+      <jhi-alert></jhi-alert>
+
+      <dl class="row-md jh-entity-details">
+        <dt><span jhiTranslate="global.field.id">ID</span></dt>
+        <dd>
+          <span>{{ nBUser.id }}</span>
+        </dd>
+        <dt><span jhiTranslate="nbSolarSurfaceApp.nBUser.nbUserID">Nb User ID</span></dt>
+        <dd>
+          <span>{{ nBUser.nbUserID }}</span>
+        </dd>
+        <dt><span jhiTranslate="nbSolarSurfaceApp.nBUser.nbAuthType">Nb Auth Type</span></dt>
+        <dd>
+          <span>{{ nBUser.nbAuthType }}</span>
+        </dd>
+        <dt><span jhiTranslate="nbSolarSurfaceApp.nBUser.nbPasswordHash">Nb Password Hash</span></dt>
+        <dd>
+          <span>{{ nBUser.nbPasswordHash }}</span>
+        </dd>
+        <dt><span jhiTranslate="nbSolarSurfaceApp.nBUser.nbFirstName">Nb First Name</span></dt>
+        <dd>
+          <span>{{ nBUser.nbFirstName }}</span>
+        </dd>
+        <dt><span jhiTranslate="nbSolarSurfaceApp.nBUser.nbLastName">Nb Last Name</span></dt>
+        <dd>
+          <span>{{ nBUser.nbLastName }}</span>
+        </dd>
+        <dt><span jhiTranslate="nbSolarSurfaceApp.nBUser.nbAddress">Nb Address</span></dt>
+        <dd>
+          <span>{{ nBUser.nbAddress }}</span>
+        </dd>
+        <dt><span jhiTranslate="nbSolarSurfaceApp.nBUser.nbEmailId">Nb Email Id</span></dt>
+        <dd>
+          <span>{{ nBUser.nbEmailId }}</span>
+        </dd>
+        <dt><span jhiTranslate="nbSolarSurfaceApp.nBUser.nbPhone">Nb Phone</span></dt>
+        <dd>
+          <span>{{ nBUser.nbPhone }}</span>
+        </dd>
+        <dt><span jhiTranslate="nbSolarSurfaceApp.nBUser.nbIsActive">Nb Is Active</span></dt>
+        <dd>
+          <span>{{ nBUser.nbIsActive }}</span>
+        </dd>
+        <dt><span jhiTranslate="nbSolarSurfaceApp.nBUser.nbIsSuspended">Nb Is Suspended</span></dt>
+        <dd>
+          <span>{{ nBUser.nbIsSuspended }}</span>
+        </dd>
+        <dt><span jhiTranslate="nbSolarSurfaceApp.nBUser.nbIsBanished">Nb Is Banished</span></dt>
+        <dd>
+          <span>{{ nBUser.nbIsBanished }}</span>
+        </dd>
+        <dt><span jhiTranslate="nbSolarSurfaceApp.nBUser.nbLastUpdated">Nb Last Updated</span></dt>
+        <dd>
+          <span>{{ nBUser.nbLastUpdated }}</span>
+        </dd>
+        <dt><span jhiTranslate="nbSolarSurfaceApp.nBUser.nbLastUpdatedBy">Nb Last Updated By</span></dt>
+        <dd>
+          <span>{{ nBUser.nbLastUpdatedBy }}</span>
+        </dd>
+      </dl>
+
+      <button type="submit" (click)="previousState()" class="btn btn-info" data-cy="entityDetailsBackButton">
+        <fa-icon icon="arrow-left"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back">Back</span>
+      </button>
+
+      <button type="button" [routerLink]="['/nb-user', nBUser.id, 'edit']" class="btn btn-primary">
+        <fa-icon icon="pencil-alt"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit">Edit</span>
+      </button>
+    </div>
+  </div>
+</div>
